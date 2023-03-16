@@ -4,8 +4,13 @@ const express = require('express');
 const app=express();
 
 
+//import connect function from db.connection.js
+const {connect} = require('./src/utils/db.connection.js');
+
 
 // Server Create
 app.listen(8000, () => {
     console.log('Application is running... ');
+    connect();
 })
+
